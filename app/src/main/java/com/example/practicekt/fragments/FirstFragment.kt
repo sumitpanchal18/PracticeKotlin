@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import com.example.practicekt.R
 
 /**
@@ -31,7 +32,10 @@ class FirstFragment : Fragment() {
         button.setOnClickListener {
             redirectOnSecondActivity()
         }
-
+        /*button.setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        }
+*/
 
         return view
 //        return inflater.inflate(R.layout.fragment_first, container, false)

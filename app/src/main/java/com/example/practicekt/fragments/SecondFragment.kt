@@ -10,6 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.createGraph
+import androidx.navigation.fragment.findNavController
 import com.example.practicekt.R
 import com.example.practicekt.databinding.FragmentSecondBinding
 
@@ -39,12 +41,14 @@ class SecondFragment : Fragment() {
 
 
         binding.btnReplaceFirstFragment.setOnClickListener {
+//            findNavController().navigate(R.id.action_secondFragment_to_firstFragment)
             /* requireActivity().supportFragmentManager
                  .beginTransaction()
                  .replace(R.id.fcvFrag, FirstFragment())
                  .addToBackStack(null)
                  .commit()
- */            requireActivity().supportFragmentManager.popBackStack()
+ */
+            requireActivity().supportFragmentManager.popBackStack()
         }
     }
 }
