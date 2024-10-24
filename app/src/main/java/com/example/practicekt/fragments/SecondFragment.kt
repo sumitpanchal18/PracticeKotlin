@@ -41,14 +41,14 @@ class SecondFragment : Fragment() {
 
 
         binding.btnReplaceFirstFragment.setOnClickListener {
-//            findNavController().navigate(R.id.action_secondFragment_to_firstFragment)
+            findNavController().navigate(R.id.action_secondFragment_to_thirdFragment)
             /* requireActivity().supportFragmentManager
                  .beginTransaction()
                  .replace(R.id.fcvFrag, FirstFragment())
                  .addToBackStack(null)
                  .commit()
  */
-            requireActivity().supportFragmentManager.popBackStack()
+//            requireActivity().supportFragmentManager.popBackStack()
         }
     }
 }

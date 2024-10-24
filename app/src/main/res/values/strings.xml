@@ -17,6 +17,7 @@
     <string name="open_dialog">Open Dialog</string>
     <string name="select_date">Select Date</string>
     <string name="e2logy_software_solutions">E2logy Software Solutions</string>
+    <string name="third_fragment">Third Fragment</string>
     <string-array name="Languages">
         <item>Languages</item>
         <item>Kotlin</item>

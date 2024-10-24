@@ -26,7 +26,6 @@ class NavControlActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        // Optional: Setup action bar with navController
         setupActionBarWithNavController(navController)
     }
 
