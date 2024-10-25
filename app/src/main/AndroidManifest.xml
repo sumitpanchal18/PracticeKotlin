@@ -37,9 +37,7 @@
         <activity
             android:name=".activity.DatePickerActivity"
             android:exported="false" />
-        <activity
-            android:name=".activity.ViewActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activity.SecondActivity"
             android:exported="false" />
@@ -63,7 +61,9 @@
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
-
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -71,10 +71,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name="androidx.work.WorkManager"
-            android:permission="android.permission.BIND_JOB_SERVICE"
             android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
             tools:ignore="Instantiatable" />
     </application>
 

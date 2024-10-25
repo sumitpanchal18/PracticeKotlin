@@ -66,6 +66,10 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
     // WorkManager
-    implementation (libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.work.runtime.ktx)
+
+//    palette
+    implementation (libs.androidx.palette.ktx)
+
 
 }

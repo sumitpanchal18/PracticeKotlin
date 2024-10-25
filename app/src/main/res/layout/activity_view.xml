@@ -66,4 +66,40 @@
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linear_layout">
+
+        <ImageView
+            android:id="@+id/plateImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img" />
+
+        <TextView
+            android:id="@+id/textViewVibrant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plateImg"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="Vibrant Color"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textViewMuted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewVibrant"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:text="Muted Color"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
