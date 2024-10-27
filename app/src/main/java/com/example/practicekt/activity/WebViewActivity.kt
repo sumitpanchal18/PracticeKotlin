@@ -18,19 +18,14 @@ class WebViewActivity : AppCompatActivity() {
         binding.wvMain.webViewClient = WebViewClient()
         binding.wvMain.loadUrl("https://www.geeksforgeeks.org/")
 
-
         binding.wvMain.settings.setSupportZoom(true)
-
-
     }
 
     @SuppressLint("SuspiciousIndentation")
     override fun onBackPressed() {
-        if (binding.wvMain.canGoBack())
-        {
+        if (binding.wvMain.canGoBack()) {
             binding.wvMain.goBack()
-        }
-        else
-        super.onBackPressed()
+        } else
+            super.onBackPressed()
     }
 }
