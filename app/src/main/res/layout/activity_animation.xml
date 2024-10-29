@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Animate Me!"
+        android:text="@string/animate_me"
         android:textSize="24sp"
         android:textColor="#FF6200EE" />
 
@@ -21,7 +21,7 @@
         android:layout_below="@id/animatedTextView"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="ViewPropertyAnimator" />
+        android:text="@string/viewpropertyanimator" />
 
     <Button
         android:id="@+id/circularRevealButton"
@@ -30,7 +30,7 @@
         android:layout_below="@id/propertyAnimateButton"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:text="Circular Reveal" />
+        android:text="@string/circular_reveal" />
 
     <Button
         android:id="@+id/valueAnimatorButton"
@@ -39,7 +39,7 @@
         android:layout_below="@id/circularRevealButton"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:text="ValueAnimator" />
+        android:text="@string/valueanimator" />
 
     <Button
         android:id="@+id/springAnimatorButton"
@@ -48,5 +48,5 @@
         android:layout_below="@id/valueAnimatorButton"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:text="SpringAnimation" />
+        android:text="@string/springanimation" />
 </RelativeLayout>

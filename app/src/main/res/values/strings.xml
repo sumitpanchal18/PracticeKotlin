@@ -18,6 +18,11 @@
     <string name="select_date">Select Date</string>
     <string name="e2logy_software_solutions">E2logy Software Solutions</string>
     <string name="third_fragment">Third Fragment</string>
+    <string name="animate_me">Animate Me!</string>
+    <string name="viewpropertyanimator">ViewPropertyAnimator</string>
+    <string name="circular_reveal">Circular Reveal</string>
+    <string name="valueanimator">ValueAnimator</string>
+    <string name="springanimation">SpringAnimation</string>
     <string-array name="Languages">
         <item>Languages</item>
         <item>Kotlin</item>
