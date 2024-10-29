@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeKt"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.workManager.WorkManagerActivity"
             android:exported="false" />
@@ -61,12 +63,11 @@
         <activity
             android:name=".activity.navigationController.NavControlActivity"
             android:exported="false" />
-
-        <activity
-            android:name=".activity.MainActivity"
-            android:exported="false" />
         <activity
             android:name=".activity.rv2.FoodRvActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AnimationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

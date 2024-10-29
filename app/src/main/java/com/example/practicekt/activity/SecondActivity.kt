@@ -13,13 +13,22 @@ import com.example.practicekt.fragments.SecondFragment
 
 class SecondActivity : AppCompatActivity() {
     lateinit var binding: ActivitySecondBinding
+    var sumit: String? = "Sumit Panchal"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        sumit?.let {
+            println(it)
+        }
+
+//        println(sumit)  // This will print: null
+
         val name = intent.getStringExtra("name")
-        val age = intent.getIntExtra("age",0)
+        val age = intent.getIntExtra("age", 0)
         val float = intent.getFloatExtra("float", 0.0F)
         Log.d(TAG, "age : $age  Float : $float")
         binding.txtSecName.text = name
@@ -38,7 +47,7 @@ class SecondActivity : AppCompatActivity() {
             replaceAnotherFragment()
         }
 
-        binding.redirectToDial.setOnClickListener{
+        binding.redirectToDial.setOnClickListener {
             startActivity(Intent(this, ViewActivity::class.java))
             finish()
         }
@@ -52,7 +61,7 @@ class SecondActivity : AppCompatActivity() {
             .commit()
     }
 
-    private fun redirectToFragment() {
+    fun redirectToFragment() {
         val fragment = FirstFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.fcvFrag, fragment)

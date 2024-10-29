@@ -15,6 +15,7 @@ import com.example.practicekt.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,13 +23,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         Log.d(TAG, "onCreate Method called")
 
+        val gfgf = SecondActivity().apply {
+            Log.d(TAG, "onCreate: $sumit")
+            println(sumit)
+            "User Summary: $sumit, Age: $sumit, Email: $sumit"
+
+
+        }
+        val s = with(gfgf) {
+            "User Summary: $sumit, Age: $sumit, Email: $sumit"
+        }
+
+        println(s)
+
+        SecondActivity().also {
+            it.sumit = "Rahul"
+            Log.e(TAG, "onCreate: ${it.sumit}")
+        }
+
 
 // Navigating from one activity to another activity
         binding.btnName.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("name","Sumit")
-            intent.putExtra("age",21)
-            intent.putExtra("float",187.87f)
+            intent.putExtra("name", "Sumit")
+            intent.putExtra("age", 21)
+            intent.putExtra("float", 187.87f)
             startActivity(intent)
 //            binding.txtName.text = "E2Logy"
         }
@@ -38,11 +57,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 // Pass data from one activity to another activity
-        binding.btnDataPass.setOnClickListener{
+        binding.btnDataPass.setOnClickListener {
 
         }
-
-
 
 
     }
