@@ -66,7 +66,14 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
     // WorkManager
-    implementation (libs.androidx.work.runtime.ktx)
-    implementation (libs.androidx.dynamicanimation)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.dynamicanimation)
+
+    implementation (libs.zxing.android.embedded)
+    implementation (libs.core)
+
+    implementation (libs.lottie)
+
+
 
 }

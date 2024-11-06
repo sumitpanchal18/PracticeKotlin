@@ -27,9 +27,11 @@ class WorkManagerActivity : AppCompatActivity() {
                     WorkInfo.State.SUCCEEDED -> {
                         Log.d("NewsAPI", "Work completed successfully")
                     }
+
                     WorkInfo.State.FAILED -> {
                         Log.e("NewsAPI", "Work failed")
                     }
+
                     else -> {
                         Log.d("NewsAPI", "Work state: ${workInfo.state}")
                     }

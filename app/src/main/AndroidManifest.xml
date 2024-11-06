@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -19,10 +24,22 @@
         android:theme="@style/Theme.PracticeKt"
         tools:targetApi="31">
         <activity
+            android:name=".activity.LottieAnimation"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.workManager.WorkManagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.workManager.WorkManagerActivity"
+            android:name=".activity.AnimationActivity"
             android:exported="false" />
         <activity
             android:name=".activity.RuntimePermission"
@@ -67,13 +84,8 @@
             android:name=".activity.rv2.FoodRvActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.AnimationActivity"
+            android:name=".activity.BarCodeScanner"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service
