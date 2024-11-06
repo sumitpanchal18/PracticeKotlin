@@ -1,16 +1,27 @@
 package com.example.practicekt.activity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.practicekt.R
+import com.airbnb.lottie.LottieDrawable
+import com.example.practicekt.databinding.ActivityLottieAnimationBinding
+import timber.log.Timber
 
 class LottieAnimation : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLottieAnimationBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lottie_animation)
+        binding = ActivityLottieAnimationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        binding.lottieAnimationView.playAnimation()
+        binding.lottieAnimationView.repeatCount = LottieDrawable.INFINITE
+        binding.lottieAnimationView.speed = 1f
+
+        binding.testingButton.setOnClickListener {
+            Timber.d("Timber is initialized and working")
+        }
     }
 }
