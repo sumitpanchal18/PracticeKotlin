@@ -8,10 +8,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.practicekt.databinding.ActivityMainBinding
 
-/**
- *  Activity Lifecycle methods demo
- */
-
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
