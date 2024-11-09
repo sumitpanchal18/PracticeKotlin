@@ -17,7 +17,7 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-         
+
         val language = resources.getStringArray(R.array.Languages)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, language)
