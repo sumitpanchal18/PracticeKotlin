@@ -67,11 +67,6 @@ dependencies {
 
     // WorkManager
     implementation(libs.androidx.work.runtime.ktx)
-<<<<<<< HEAD
-
-//    palette
-    implementation (libs.androidx.palette.ktx)
-=======
     implementation(libs.androidx.dynamicanimation)
 
     implementation(libs.zxing.android.embedded)
@@ -86,7 +81,6 @@ dependencies {
     // ExoPlayer
     implementation (libs.exoplayer.core)
     implementation (libs.exoplayer.ui)
->>>>>>> master
 
 
 }

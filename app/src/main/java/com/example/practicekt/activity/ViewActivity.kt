@@ -1,7 +1,6 @@
 package com.example.practicekt.activity
 
 import android.content.ContentValues.TAG
-import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -9,8 +8,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.palette.graphics.Palette
 import com.example.practicekt.R
 import com.example.practicekt.databinding.ActivityViewBinding
 
@@ -20,14 +17,7 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-<<<<<<< HEAD
 
-//        Toast.makeText(this, "ViewActivity launched", Toast.LENGTH_SHORT).show()
-        extractColorsFromImage()
-
-=======
-         
->>>>>>> master
         val language = resources.getStringArray(R.array.Languages)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, language)
@@ -56,22 +46,5 @@ class ViewActivity : AppCompatActivity() {
             }
         }
 
-    }
-    private fun extractColorsFromImage() {
-        val bitmap = (binding.plateImg.drawable as BitmapDrawable).bitmap
-
-        Palette.from(bitmap).generate { palette ->
-            palette?.let {
-                val vibrantColor = it.getVibrantColor(
-                    ContextCompat.getColor(this, android.R.color.darker_gray)
-                )
-                binding.textViewVibrant.setBackgroundColor(vibrantColor)
-
-                val mutedColor = it.getMutedColor(
-                    ContextCompat.getColor(this, android.R.color.darker_gray)
-                )
-                binding.textViewMuted.setBackgroundColor(mutedColor)
-            }
-        }
     }
 }
