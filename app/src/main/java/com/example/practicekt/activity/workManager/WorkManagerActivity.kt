@@ -7,7 +7,6 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import com.example.practicekt.R
-import timber.log.Timber
 
 class WorkManagerActivity : AppCompatActivity() {
 
@@ -26,15 +25,15 @@ class WorkManagerActivity : AppCompatActivity() {
             .observe(this) { workInfo ->
                 when (workInfo?.state) {
                     WorkInfo.State.SUCCEEDED -> {
-                        Timber.tag("NewsAPI").d("Work completed successfully")
+                        Log.d("TAG","Work completed successfully")
                     }
 
                     WorkInfo.State.FAILED -> {
-                        Timber.tag("NewsAPI").e("Work failed")
+                        Log.d("TAG","Work failed")
                     }
 
                     else -> {
-                        Timber.tag("NewsAPI").d("Work state: " + workInfo?.state)
+                        Log.d("TAG","Work state: " + workInfo?.state)
                     }
                 }
             }

@@ -15,7 +15,6 @@ import com.example.practicekt.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
-
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,8 +26,6 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "onCreate: $sumit")
             println(sumit)
             "User Summary: $sumit, Age: $sumit, Email: $sumit"
-
-
         }
         val s = with(gfgf) {
             "User Summary: $sumit, Age: $sumit, Email: $sumit"

@@ -76,7 +76,7 @@ dependencies {
     implementation(libs.lottie)
 
     // Timber
-    implementation(libs.timber)
+//    implementation(libs.timber)
 
     // ExoPlayer
     implementation (libs.exoplayer.core)

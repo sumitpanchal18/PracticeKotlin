@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieDrawable
 import com.example.practicekt.databinding.ActivityLottieAnimationBinding
-import timber.log.Timber
 
 class LottieAnimation : AppCompatActivity() {
 
@@ -21,7 +20,7 @@ class LottieAnimation : AppCompatActivity() {
         binding.lottieAnimationView.speed = 1f
 
         binding.testingButton.setOnClickListener {
-            Timber.d("Timber is initialized and working")
+            Log.d("TAG","Timber is initialized and working")
         }
     }
 }
