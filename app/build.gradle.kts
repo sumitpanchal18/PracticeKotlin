@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.practicekt"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.practicekt"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -67,9 +67,26 @@ dependencies {
 
     // WorkManager
     implementation(libs.androidx.work.runtime.ktx)
+<<<<<<< HEAD
 
 //    palette
     implementation (libs.androidx.palette.ktx)
+=======
+    implementation(libs.androidx.dynamicanimation)
+
+    implementation(libs.zxing.android.embedded)
+    implementation(libs.core)
+
+    // Lottie
+    implementation(libs.lottie)
+
+    // Timber
+//    implementation(libs.timber)
+
+    // ExoPlayer
+    implementation (libs.exoplayer.core)
+    implementation (libs.exoplayer.ui)
+>>>>>>> master
 
 
 }

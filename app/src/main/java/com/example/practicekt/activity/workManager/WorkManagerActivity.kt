@@ -23,15 +23,17 @@ class WorkManagerActivity : AppCompatActivity() {
         WorkManager.getInstance(this)
             .getWorkInfoByIdLiveData(testWork.id)
             .observe(this) { workInfo ->
-                when (workInfo.state) {
+                when (workInfo?.state) {
                     WorkInfo.State.SUCCEEDED -> {
-                        Log.d("NewsAPI", "Work completed successfully")
+                        Log.d("TAG","Work completed successfully")
                     }
+
                     WorkInfo.State.FAILED -> {
-                        Log.e("NewsAPI", "Work failed")
+                        Log.d("TAG","Work failed")
                     }
+
                     else -> {
-                        Log.d("NewsAPI", "Work state: ${workInfo.state}")
+                        Log.d("TAG","Work state: " + workInfo?.state)
                     }
                 }
             }

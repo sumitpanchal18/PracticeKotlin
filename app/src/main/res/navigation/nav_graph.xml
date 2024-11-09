@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.practicekt.fragments.SecondFragment"
-        tools:layout="@layout/fragment_second" >
+        tools:layout="@layout/fragment_second">
 
 
         <action
@@ -28,7 +28,7 @@
         android:id="@+id/thirdFragment"
         android:name="com.example.practicekt.fragments.ThirdFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third" >
+        tools:layout="@layout/fragment_third">
         <action
             android:id="@+id/action_thirdFragment_to_firstFragment"
             app:destination="@id/firstFragment" />

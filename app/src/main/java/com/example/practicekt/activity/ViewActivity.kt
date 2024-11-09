@@ -20,10 +20,14 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+<<<<<<< HEAD
 
 //        Toast.makeText(this, "ViewActivity launched", Toast.LENGTH_SHORT).show()
         extractColorsFromImage()
 
+=======
+         
+>>>>>>> master
         val language = resources.getStringArray(R.array.Languages)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, language)
