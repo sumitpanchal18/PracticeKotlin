@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 import com.example.practicekt.R
-import com.example.practicekt.fragments.CustomDialogFragment
 
 class AlertDialogActivity : AppCompatActivity() {
 
@@ -22,27 +21,35 @@ class AlertDialogActivity : AppCompatActivity() {
             val dialog = CustomDialogFragment()
             dialog.show(supportFragmentManager, "CustomDialogFragment")
         }*/
-            button.setOnClickListener {
-                val buildDialog = AlertDialog.Builder(this)
-                buildDialog.setIcon(R.drawable.img)
-                buildDialog.setTitle("E2Logy software solution")
-                buildDialog.setMessage("HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_")
+        button.setOnClickListener {
+            val buildDialog = AlertDialog.Builder(this)
+            buildDialog.setIcon(R.drawable.img)
+            buildDialog.setTitle("E2Logy software solution")
+            buildDialog.setMessage("HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_")
 
-                buildDialog.setPositiveButton("Yes"
-                ) { _, _ -> Log.d(TAG, "Successfully Clicked on Yes") }
+            buildDialog.setPositiveButton(
+                "Yes"
+            ) { _, _ -> Log.d(TAG, "Successfully Clicked on Yes") }
 
-    //            buildDialog.setPositiveButtonIcon(resources.getDrawable(R.drawable.img_1))
+            //            buildDialog.setPositiveButtonIcon(resources.getDrawable(R.drawable.img_1))
 
-                buildDialog.setNeutralButton("Cancel"
-                ) { _, _ -> Log.d(TAG, "Successfully Clicked on Cancel") }
+            buildDialog.setNeutralButton(
+                "Cancel"
+            ) { _, _ -> Log.d(TAG, "Successfully Clicked on Cancel") }
 
-                buildDialog.setNegativeButton("No"
-                ) { _, _ -> Log.d(TAG, "Successfully Clicked on No") }
+            buildDialog.setNegativeButton(
+                "No"
+            ) { _, _ -> Log.d(TAG, "Successfully Clicked on No") }
 
-                val create : AlertDialog = buildDialog.create()
-                create.show()
-                create.window?.setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.edittext_bg))
-            }
+            val create: AlertDialog = buildDialog.create()
+            create.show()
+            create.window?.setBackgroundDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.edittext_bg
+                )
+            )
+        }
     }
 
 }

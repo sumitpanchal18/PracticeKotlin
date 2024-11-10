@@ -1,6 +1,5 @@
 package com.example.practicekt.fragments
 
-import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
@@ -10,57 +9,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.practicekt.R
+import com.example.practicekt.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
 
-    @SuppressLint("MissingInflatedId")
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        Log.d(TAG, "Fragment onCreateView: ")
-
-        val view = inflater.inflate(R.layout.fragment_first, container, false)
-        val button = view.findViewById<Button>(R.id.btnRedirectSecFrag)
-        val tzt = view.findViewById<TextView>(R.id.txtFirstFragment)
-
-        button.setOnClickListener {
-//            redirectOnSecondActivity()
-            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
-
-        }
-
-        tzt.setOnClickListener {
-            shareText("This is the text you want to share!")
-        }
-
-        return view
-    }
-
-    private fun redirectOnSecondActivity() {
-        val bundle = Bundle()
-        bundle.putString("name", "Rahul")
-
-        val secondFragment = SecondFragment()
-        secondFragment.arguments = bundle
-
-    }
-
-    private fun shareText(textToShare: String) {
-        val sendIntent: Intent = Intent().apply {
-            action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, textToShare)
-            type = "text/plain"
-        }
-
-        val shareIntent = Intent.createChooser(sendIntent, null)
-        startActivity(shareIntent)
-    }
+    private lateinit var binding: FragmentFirstBinding
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -72,9 +27,36 @@ class FirstFragment : Fragment() {
         Log.d(TAG, "Fragment onCreate: ")
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        Log.d(TAG, "Fragment onCreateView: ")
+        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d(TAG, "Fragment onViewCreated: ")
+
+        binding.btnRedirectSecFrag.setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        }
+
+        binding.txtFirstFragment.setOnClickListener {
+            shareText("This is the text you want to share!")
+        }
+    }
+
+    private fun shareText(textToShare: String) {
+        val sendIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, textToShare)
+            type = "text/plain"
+        }
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        startActivity(shareIntent)
     }
 
     override fun onStart() {
@@ -100,6 +82,7 @@ class FirstFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         Log.d(TAG, "Fragment onDestroyView: ")
+        // Optional: any additional view-related cleanup can go here
     }
 
     override fun onDestroy() {
