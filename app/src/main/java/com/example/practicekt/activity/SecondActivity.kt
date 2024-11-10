@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.practicekt.R
 import com.example.practicekt.databinding.ActivitySecondBinding
 import com.example.practicekt.fragments.FirstFragment
@@ -14,6 +17,8 @@ import com.example.practicekt.fragments.SecondFragment
 class SecondActivity : AppCompatActivity() {
     lateinit var binding: ActivitySecondBinding
     var sumit: String? = "Sumit Panchal"
+    private lateinit var navController: NavController
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,43 +36,42 @@ class SecondActivity : AppCompatActivity() {
         val age = intent.getIntExtra("age", 0)
         val float = intent.getFloatExtra("float", 0.0F)
         Log.d(TAG, "age : $age  Float : $float")
-        binding.txtSecName.text = name
+//        binding.txtSecName.text = name
 
-        // Navigating to previous activity
         binding.btnFinishAc.setOnClickListener {
 //            startActivity(Intent(this,MainActivity::class.java))
             finish()
         }
+
+        setSupportActionBar(binding.toolbar)
+
 
         binding.txtSecName.setOnClickListener {
             redirectToFragment()
         }
 
         binding.btnReplaceFragment.setOnClickListener {
-            replaceAnotherFragment()
+//            replaceAnotherFragment()
         }
 
         binding.redirectToDial.setOnClickListener {
             startActivity(Intent(this, ViewActivity::class.java))
             finish()
         }
-
     }
 
     private fun replaceAnotherFragment() {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fcvFrag, SecondFragment())
+            .replace(R.id.nav_host_fragment, SecondFragment())
             .addToBackStack(null)
             .commit()
     }
 
     fun redirectToFragment() {
-        val fragment = FirstFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fcvFrag, fragment)
-            .commit()
         binding.btnFinishAc.visibility = View.GONE
         binding.txtSecName.visibility = View.GONE
+        binding.redirectToDial.visibility = View.GONE
+        binding.btnReplaceFragment.visibility = View.GONE
     }
 }
 

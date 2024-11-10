@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.practicekt.R
 
 class FirstFragment : Fragment() {
@@ -29,7 +30,9 @@ class FirstFragment : Fragment() {
         val tzt = view.findViewById<TextView>(R.id.txtFirstFragment)
 
         button.setOnClickListener {
-            redirectOnSecondActivity()
+//            redirectOnSecondActivity()
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+
         }
 
         tzt.setOnClickListener {
@@ -46,10 +49,6 @@ class FirstFragment : Fragment() {
         val secondFragment = SecondFragment()
         secondFragment.arguments = bundle
 
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.fcvFrag, secondFragment)
-            .addToBackStack(null)
-            .commit()
     }
 
     private fun shareText(textToShare: String) {

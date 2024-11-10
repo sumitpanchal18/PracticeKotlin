@@ -21,7 +21,7 @@ class ThirdFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var textTitle = view.findViewById<TextView>(R.id.txtTitle)
+        val textTitle = view.findViewById<TextView>(R.id.txtTitle)
 
         textTitle.setOnClickListener {
             findNavController().navigate(R.id.action_thirdFragment_to_firstFragment)
