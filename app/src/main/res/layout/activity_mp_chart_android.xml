@@ -5,11 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.sp.WebViewActivity">
-
-    <WebView
-        android:id="@+id/wvMain"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    tools:context=".activity.chart.MpChartAndroid">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

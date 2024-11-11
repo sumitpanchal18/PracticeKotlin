@@ -1,4 +1,4 @@
-package com.example.practicekt.activity
+package com.example.practicekt.activity.sp
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -7,11 +7,8 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.practicekt.R
 import com.example.practicekt.databinding.ActivitySecondBinding
-import com.example.practicekt.fragments.FirstFragment
 import com.example.practicekt.fragments.SecondFragment
 
 class SecondActivity : AppCompatActivity() {

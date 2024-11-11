@@ -1,12 +1,9 @@
-package com.example.practicekt.activity
+package com.example.practicekt.activity.sp
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.practicekt.R
 import com.example.practicekt.databinding.ActivityDatePickerBinding

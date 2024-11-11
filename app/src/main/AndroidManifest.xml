@@ -25,7 +25,10 @@
         android:theme="@style/Theme.PracticeKt"
         tools:targetApi="31">
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.chart.MpChartAndroid"
+            android:exported="false" />
+        <activity
+            android:name=".activity.sp.ExoPlayer"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,37 +37,40 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.LottieAnimation"
+            android:name=".activity.sp.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.sp.LottieAnimation"
             android:exported="false" />
         <activity
             android:name=".activity.workManager.WorkManagerActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ExoPlayer"
+            android:name=".activity.service.ServiceActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.AnimationActivity"
+            android:name=".activity.sp.AnimationActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.RuntimePermission"
+            android:name=".activity.sp.RuntimePermission"
             android:exported="false" />
         <activity
-            android:name=".activity.WebViewActivity"
+            android:name=".activity.sp.WebViewActivity"
             android:exported="false" />
         <activity
             android:name=".activity.rv.RvActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.AlertDialogActivity"
+            android:name=".activity.sp.AlertDialogActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.DatePickerActivity"
+            android:name=".activity.sp.DatePickerActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ViewActivity"
+            android:name=".activity.sp.ViewActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SecondActivity"
+            android:name=".activity.sp.SecondActivity"
             android:exported="false" />
         <activity
             android:name=".activity.layout.ConstraintLayoutActivity"
@@ -88,9 +94,10 @@
             android:name=".activity.rv2.FoodRvActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.BarCodeScanner"
+            android:name=".activity.sp.BarCodeScanner"
             android:exported="true" />
 
+        <service android:name=".activity.service.AudioService" />
         <service
             android:name="androidx.work.WorkManager"
             android:exported="true"

@@ -23,6 +23,8 @@
     <string name="circular_reveal">Circular Reveal</string>
     <string name="valueanimator">ValueAnimator</string>
     <string name="springanimation">SpringAnimation</string>
+    <string name="stop_audio">Stop Audio</string>
+    <string name="play_audio">Play Audio</string>
     <string-array name="Languages">
         <item>Languages</item>
         <item>Kotlin</item>

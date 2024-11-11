@@ -1,4 +1,4 @@
-package com.example.practicekt.activity
+package com.example.practicekt.activity.sp
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
