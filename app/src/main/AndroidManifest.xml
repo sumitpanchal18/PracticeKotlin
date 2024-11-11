@@ -25,10 +25,10 @@
         android:theme="@style/Theme.PracticeKt"
         tools:targetApi="31">
         <activity
-            android:name=".activity.chart.MpChartAndroid"
+            android:name=".activity.sp.ExoPlayer"
             android:exported="false" />
         <activity
-            android:name=".activity.sp.ExoPlayer"
+            android:name=".activity.chart.MpChartAndroid"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
