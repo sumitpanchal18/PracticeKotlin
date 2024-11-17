@@ -14,14 +14,12 @@ import com.example.practicekt.fragments.SecondFragment
 class SecondActivity : AppCompatActivity() {
     lateinit var binding: ActivitySecondBinding
     var sumit: String? = "Sumit Panchal"
-    private lateinit var navController: NavController
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         sumit?.let {
             println(it)

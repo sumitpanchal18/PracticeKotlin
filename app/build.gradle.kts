@@ -81,8 +81,10 @@ dependencies {
 //    implementation(libs.timber)
 
     // ExoPlayer
-    implementation (libs.exoplayer.core)
-    implementation (libs.exoplayer.ui)
+    implementation(libs.exoplayer.core)
+    implementation(libs.exoplayer.ui)
 
+    // MpChart Android
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
 }
