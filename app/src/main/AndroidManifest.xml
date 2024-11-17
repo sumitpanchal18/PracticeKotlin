@@ -28,16 +28,15 @@
             android:name=".activity.sp.ExoPlayer"
             android:exported="false" />
         <activity
-            android:name=".activity.chart.MpChartAndroid"
+            android:name=".activity.sp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.sp.MainActivity"
+            android:name=".activity.rv2.FoodRvActivity"
             android:exported="true" />
         <activity
             android:name=".activity.sp.LottieAnimation"
@@ -91,7 +90,7 @@
             android:name=".activity.navigationController.NavControlActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.rv2.FoodRvActivity"
+            android:name=".activity.chart.MpChartAndroid"
             android:exported="false" />
         <activity
             android:name=".activity.sp.BarCodeScanner"
