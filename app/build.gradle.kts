@@ -87,4 +87,9 @@ dependencies {
     // MpChart Android
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
+    // Unit Testing
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.hamcrest)
+
 }

@@ -7,10 +7,14 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.test.runner.AndroidJUnit4
 import com.example.practicekt.R
 import com.example.practicekt.databinding.ActivitySecondBinding
 import com.example.practicekt.fragments.SecondFragment
+import org.junit.Test
+import org.junit.runner.RunWith
 
+@RunWith(AndroidJUnit4::class)
 class SecondActivity : AppCompatActivity() {
     lateinit var binding: ActivitySecondBinding
     var sumit: String? = "Sumit Panchal"
@@ -62,6 +66,7 @@ class SecondActivity : AppCompatActivity() {
             .commit()
     }
 
+    @Test
     fun redirectToFragment() {
         binding.btnFinishAc.visibility = View.GONE
         binding.txtSecName.visibility = View.GONE

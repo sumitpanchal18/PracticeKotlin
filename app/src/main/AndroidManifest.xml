@@ -28,7 +28,7 @@
             android:name=".activity.sp.ExoPlayer"
             android:exported="false" />
         <activity
-            android:name=".activity.sp.MainActivity"
+            android:name=".activity.rv2.FoodRvActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.rv2.FoodRvActivity"
+            android:name=".activity.sp.MainActivity"
             android:exported="true" />
         <activity
             android:name=".activity.sp.LottieAnimation"
