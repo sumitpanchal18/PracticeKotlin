@@ -25,6 +25,9 @@
         android:theme="@style/Theme.PracticeKt"
         tools:targetApi="31">
         <activity
+            android:name=".activity.rv2.rv2.RvNestedActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.rv2.nestedRv.NestedRvActivity"
             android:exported="true">
             <intent-filter>
