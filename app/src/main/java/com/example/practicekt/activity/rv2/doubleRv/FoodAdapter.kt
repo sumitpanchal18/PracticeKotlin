@@ -1,4 +1,4 @@
-package com.example.practicekt.activity.rv2
+package com.example.practicekt.activity.rv2.doubleRv
 
 import android.view.LayoutInflater
 import android.view.View

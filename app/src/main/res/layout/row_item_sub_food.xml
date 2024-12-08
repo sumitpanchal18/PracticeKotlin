@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageViewSubFood"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img_3"/>
+
+    <TextView
+        android:id="@+id/textViewSubFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sub Food Item"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/textViewSubFoodDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sub Description"
+        android:textSize="12sp"/>
+</LinearLayout>

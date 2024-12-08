@@ -25,16 +25,20 @@
         android:theme="@style/Theme.PracticeKt"
         tools:targetApi="31">
         <activity
-            android:name=".activity.sp.ExoPlayer"
-            android:exported="false" />
-        <activity
-            android:name=".activity.rv2.FoodRvActivity"
+            android:name=".activity.rv2.nestedRv.NestedRvActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.sp.ExoPlayer"
+            android:exported="false" />
+        <activity
+            android:name=".activity.rv2.doubleRv.FoodRvActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.sp.MainActivity"
             android:exported="true" />
