@@ -25,6 +25,10 @@
     <string name="springanimation">SpringAnimation</string>
     <string name="stop_audio">Stop Audio</string>
     <string name="play_audio">Play Audio</string>
+    <string name="button_1">Button 1</string>
+    <string name="button_2">Button 2</string>
+    <string name="button_3">Button 3</string>
+    <string name="query_received_data">Query Received Data</string>
     <string-array name="Languages">
         <item>Languages</item>
         <item>Kotlin</item>
