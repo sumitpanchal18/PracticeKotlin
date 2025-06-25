@@ -36,7 +36,7 @@ class CustomAdapter(private val itemList: List<ItemData>) : RecyclerView.Adapter
 
             // Check if this item has sub-items (nested RecyclerView)
             if (itemData.subItems != null) {
-                holder.recyclerViewSubItems.visibility = View.VISIBLE
+                holder.recyclerViewSubItems.visibility = View.GONE
                 val subItemAdapter = CustomAdapter(itemData.subItems) // Recursively use the same adapter
                 holder.recyclerViewSubItems.layoutManager = LinearLayoutManager(holder.itemView.context)
                 holder.recyclerViewSubItems.adapter = subItemAdapter
