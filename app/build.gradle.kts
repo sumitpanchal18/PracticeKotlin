@@ -85,11 +85,16 @@ dependencies {
     implementation(libs.exoplayer.ui)
 
     // MpChart Android
-    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation(libs.mpandroidchart)
 
     // Unit Testing
     testImplementation(libs.junit)
     testImplementation(libs.mockito.core)
     testImplementation(libs.hamcrest)
+    implementation(libs.gson)
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
 
 }
