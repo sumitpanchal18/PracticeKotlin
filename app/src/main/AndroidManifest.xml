@@ -27,23 +27,26 @@
         android:theme="@style/Theme.PracticeKt"
         tools:targetApi="31">
         <activity
+            android:name=".activity.rv2.nestedRVSingleAdapter.RvNestedActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".activity.sp.AlertDialogActivity"
             android:exported="false" />
         <activity
             android:name=".activity.sp.LottieAnimation"
             android:exported="false" />
         <activity
-            android:name=".activity.rv.RvActivity"
-            android:exported="true" />
-        <activity
             android:name=".activity.sp.ExoPlayer"
             android:exported="false" />
         <activity
-            android:name=".activity.rv2.doubleRv.FoodRvActivity"
+            android:name=".activity.sp.BarCodeScanner"
             android:exported="false" />
-        <activity
-            android:name=".activity.rv2.rv2.RvNestedActivity"
-            android:exported="true" />
         <activity
             android:name=".activity.sp.DpadButton"
             android:exported="false" />
@@ -61,9 +64,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.sp.WebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.rv2.nestedRv.NestedRvActivity"
             android:exported="false" />
         <activity
             android:name=".activity.sp.MainActivity"
@@ -100,15 +100,6 @@
         <activity
             android:name=".activity.chart.MpChartAndroid"
             android:exported="false" />
-        <activity
-            android:name=".activity.sp.BarCodeScanner"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <service android:name=".activity.service.AudioService" />
         <service

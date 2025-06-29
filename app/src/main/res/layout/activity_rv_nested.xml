@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.rv2.rv2.RvNestedActivity">
+    tools:context=".activity.rv2.nestedRVSingleAdapter.RvNestedActivity">
 
     <!-- Main Items RecyclerView (Vertical) -->
     <androidx.recyclerview.widget.RecyclerView
