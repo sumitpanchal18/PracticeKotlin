@@ -29,6 +29,7 @@
     <string name="button_2">Button 2</string>
     <string name="button_3">Button 3</string>
     <string name="query_received_data">Query Received Data</string>
+    <string name="type_two_caption">Type Two Caption</string>
     <string-array name="Languages">
         <item>Languages</item>
         <item>Kotlin</item>

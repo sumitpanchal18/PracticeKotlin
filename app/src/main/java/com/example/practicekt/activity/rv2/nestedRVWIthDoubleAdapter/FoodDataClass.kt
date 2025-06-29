@@ -1,4 +1,4 @@
-package com.example.practicekt.activity.rv2.nestedRv
+package com.example.practicekt.activity.rv2.nestedRVWIthDoubleAdapter
 
 data class FoodDataClass(
     val name: String,

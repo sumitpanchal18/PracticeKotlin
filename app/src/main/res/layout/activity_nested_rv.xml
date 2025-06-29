@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.rv2.nestedRv.NestedRvActivity">
+    tools:context=".activity.rv2.nestedRVWIthDoubleAdapter.NestedRvActivity">
 
     <!-- Main RecyclerView that holds the list of food items -->
     <androidx.recyclerview.widget.RecyclerView

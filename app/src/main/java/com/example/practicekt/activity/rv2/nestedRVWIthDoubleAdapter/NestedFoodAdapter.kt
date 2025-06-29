@@ -1,4 +1,4 @@
-package com.example.practicekt.activity.rv2.nestedRv
+package com.example.practicekt.activity.rv2.nestedRVWIthDoubleAdapter
 
 import android.view.LayoutInflater
 import android.view.View
